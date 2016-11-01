@@ -4,4 +4,4 @@
 
 ### Tags
 
-JavaScript, video, guide, course, Anthony Alicea
+JavaScript, video, guide, course, Anthony Alicea, paid
