@@ -1,6 +1,6 @@
-# Learning
+# 🎓 Learning
 
-> Useful posts, blogs, and articles related to development
+> Useful posts, articles, videos and podcasts related to development
 
 
 ### How to use
