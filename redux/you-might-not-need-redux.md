@@ -4,6 +4,4 @@
 
 ### Tags
 
-- Redux
-- React
-- JavaScript
+Redux, React, JavaScript

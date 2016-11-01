@@ -4,7 +4,4 @@
 
 ### Tags
 
-- Testing
-- Enzyme
-- React
-- JavaScript
+Testing, Enzyme, React, JavaScript

@@ -1,4 +1,4 @@
-# Reading
+# Learning
 
 > Useful posts, blogs, and articles related to development
 

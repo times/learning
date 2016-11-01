@@ -4,9 +4,4 @@
 
 ### Tags
 
-- Custom Elements
-- Web components
-- Components
-- Shadow DOM
-- HTML
-- JavaScript
+Custom Elements, Web components, Components, Shadow DOM, HTML, JavaScript
