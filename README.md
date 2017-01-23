@@ -5,9 +5,9 @@
 
 ### Latest links
 
-- [Progressive Web Apps with React.js](https://github.com/times/learning/blob/master/react/progressive-web-apps-with-react-js.md) _submitted by [@chrishutchinson](https://github.com/chrishutchinson)_
-- [Getting Started with Redux](https://github.com/times/learning/blob/master/redux/getting-started-with-redux.md) _submitted by [@elliotdavies](https://github.com/elliotdavies)_
-- [How to Setup Your Mac to Develop News Applications Like We Do](https://github.com/times/learning/blob/master/setup/how-to-setup-your-mac-to-develop-news-applications-like-we-do.md) _submitted by [@basilesimon](https://github.com/basilesimon)_
+- [CS50 Introduction to Computer Science](https://github.com/times/learning/blob/master/general/cs50.md) _submitted by [@mattietk](https://github.com/MattieTK)_
+- [JavaScript30 video course](https://github.com/times/learning/blob/master/javascript/javascript-30.md) _submitted by [@elliotdavies](https://github.com/elliotdavies)_
+- [What does Lambda support?](https://github.com/times/learning/blob/master/aws/what-does-lambda-support.md) _submitted by [@chrishutchinson](https://github.com/chrishutchinson)_
 
 
 ### How to use
