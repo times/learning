@@ -1,0 +1,220 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 4rem;
+}
+
+div.wrapper {
+}
+
+@media screen and (min-width: 415px) {
+  div.wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.sidebar input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  visibility: none;
+  display: none;
+}
+
+.sidebar label {
+  height: 4rem;
+  width: 100%;
+  color: #fff;
+  background-color: #225ba0;
+  display: inline-block;
+  text-align: left;
+  padding: 0 1rem;
+  font-size: 2rem;
+  line-height: 4.4rem;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+}
+
+.sidebar label span {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.sidebar input[type="checkbox"]:checked + aside {
+  transform: translateX(0%);
+}
+
+aside {
+  height: 100vh;
+  padding: 4rem 3rem;
+  background-color: #225ba0;
+  box-sizing: border-box;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+aside button {
+  top: 0;
+  left: 100%;
+  background-color: #225ba0;
+  color: #fff;
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  border: 0;
+}
+
+@media screen and (min-width: 415px) {
+  aside {
+    min-width: 35rem;
+    max-width: 35rem;
+    transform: translateX(0);
+    overflow: auto;
+  }
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+aside img {
+  max-width: 60%;
+  margin-bottom: 2rem;
+}
+
+aside ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside ul li {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+aside ul li a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-align: center;
+  background: #fff;
+  padding: 1rem 2rem 0.8rem;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px #888;
+}
+
+aside ul li a:hover {
+  background: #3a3a3a;
+  color: #fff;
+}
+
+main {
+  width: auto;
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+}
+
+@media screen and (min-width: 415px) {
+  main {
+    padding: 1rem 3rem;
+  }
+}
+
+main header {
+  margin-bottom: 2rem;
+}
+
+main header h1 {
+  font-family: "TimesModern-Bold", serif;
+  font-weight: normal;
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+main header p {
+  font-family: "TimesModern-Regular", serif;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 415px) {
+  main section {
+    margin-bottom: 5rem;
+  }
+}
+
+main section h2 {
+  color: #333;
+  margin: 0 0 0.6rem;
+  padding-top: 1rem;
+  border-bottom: 3px solid #333;
+  font-family: "TimesModern-Bold", serif;
+  font-weight: normal;
+}
+
+main section .markdown {
+  background: #f8f7f1;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 1px 1px #888;
+}
+
+@media screen and (min-width: 415px) {
+  main section .markdown {
+    padding: 1rem 3rem;
+  }
+}
+
+main section .markdown h1 a {
+  color: #225ba0;
+}
+
+main section .markdown h1 {
+  font-size: 1.8rem;
+}
+
+main section .markdown h1:before {
+  content: "🔗 ";
+}
+
+main section .markdown blockquote {
+  border-left: 3px solid #333;
+  padding: 1rem;
+  margin: 0;
+}
+
+main section .markdown blockquote p {
+  margin: 0;
+}
+
+main section .markdown div > p:before {
+  content: "🔖 ";
+}
