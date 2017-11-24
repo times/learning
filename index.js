@@ -16,12 +16,19 @@ const getFiles = (path, extension, ignore = []) =>
     .filter(a => fs.statSync(`${path}${a}`).isFile())
     .filter(a => a.endsWith(extension))
     .filter(a => !ignore.includes(a))
-    .map(a => ({
-      name: a,
-      content: fs.readFileSync(`${path}${a}`).toString()
-    }));
+    .map(a => {
+      const content = fs.readFileSync(`${path}${a}`).toString();
+      return {
+        name: a,
+        content,
+        headline: content.match(/# \[(.*?)\]/)[1],
+        dateAdded: fs.statSync(`${path}${a}`).birthtime
+      };
+    });
 
-const markdownFiles = getDirectories("./", [".git", "node_modules"]).reduce(
+const directories = getDirectories("./", [".git", "node_modules"]);
+
+const markdownFiles = directories.reduce(
   (acc, s) =>
     Object.assign({}, acc, {
       [s]: getFiles(`./${s}/`, ".md")
@@ -29,7 +36,18 @@ const markdownFiles = getDirectories("./", [".git", "node_modules"]).reduce(
   {}
 );
 
-const html = ReactDOMServer.renderToStaticMarkup(<App files={markdownFiles} />);
+const latestFiles = directories
+  .reduce((acc, s) => [...acc, ...getFiles(`./${s}/`, ".md")], [])
+  .sort((a, b) => {
+    const diff = a.dateAdded - b.dateAdded;
+    if (diff === 0) return diff;
+    return diff > 0 ? -1 : 1;
+  })
+  .splice(0, 3);
+
+const html = ReactDOMServer.renderToStaticMarkup(
+  <App files={markdownFiles} latest={latestFiles} />
+);
 
 fs.writeFileSync(
   "./index.html",

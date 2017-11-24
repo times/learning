@@ -72,20 +72,20 @@ aside img {
   max-width: 15rem;
 }
 
-aside ul {
-  margin: 0;
+aside ul.categories {
+  margin: 0 0 2rem;
   padding: 0;
   list-style-type: none;
   display: none;
   flex-wrap: wrap;
 }
 
-aside ul li {
+aside ul.categories li {
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
 
-aside ul li a {
+aside ul.categories li a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.2rem;
@@ -100,16 +100,41 @@ aside ul li a {
   box-shadow: 0px 1px 1px #888;
 }
 
-aside ul li a:hover,
-aside ul li a:active,
-aside ul li a:focus {
+aside ul.categories li a:hover,
+aside ul.categories li a:active,
+aside ul.categories li a:focus {
   background: #3a3a3a;
   color: #fff;
 }
 
-aside ul li a:focus {
+aside ul.categories li a:focus {
   background: #3a3a3a;
   color: #fff;
+}
+
+aside div.latestWrapper {
+  background: #fff;
+  padding: 2rem;
+  display: none;
+}
+
+aside div.latestWrapper h2 {
+  margin: 0 0 1rem;
+}
+
+aside ul.latest {
+  margin: 0;
+  padding: 0 0 0 2rem;
+  color: #225ba0;
+}
+
+aside ul.latest li {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+aside ul.latest li a {
+  color: #225ba0;
 }
 
 @media screen and (min-width: 737px) {
@@ -121,8 +146,12 @@ aside ul li a:focus {
     height: 100vh;
   }
 
-  aside ul {
+  aside ul.categories {
     display: flex;
+  }
+
+  aside div.latestWrapper {
+    display: block;
   }
 
   aside img {
@@ -141,11 +170,15 @@ main {
   width: auto;
   flex-grow: 1;
   padding: 1rem 1.5rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 737px) {
   main {
     padding: 2rem 4rem;
+    max-width: initial;
+    margin: 0;
   }
 }
 
@@ -164,16 +197,25 @@ main header iframe {
 main header h1 {
   font-family: "TimesModern-Bold", serif;
   font-weight: normal;
-  font-size: 4.4rem;
+  font-size: 3.4rem;
   margin: 1rem 0;
 }
 
 main header p {
   font-family: "TimesModern-Regular", serif;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 1.3em;
   color: #696969;
   margin: 0;
+}
+
+@media screen and (min-width: 737px) {
+  main header h1 {
+    font-size: 4.4rem;
+  }
+  main header p {
+    font-size: 2.2rem;
+  }
 }
 
 main section {
@@ -201,7 +243,6 @@ main section .markdown {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   margin-bottom: 1.5rem;
-  box-shadow: 0px 1px 1px #888;
 }
 
 @media screen and (min-width: 737px) {
@@ -212,6 +253,10 @@ main section .markdown {
 
 main section .markdown h1 a {
   color: #225ba0;
+}
+
+main section .markdown h1 a:focus:after {
+  content: " →";
 }
 
 main section .markdown h1 {

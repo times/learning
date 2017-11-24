@@ -7,10 +7,12 @@ const capitalise = string => {
   return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
 };
 
-const Sidebar = ({ files }) => (
+const Sidebar = ({ files, latest }) => (
   <aside className="sticky">
-    <img src="./dual-masthead.svg" />
-    <ul>
+    <a href="#">
+      <img src="./dual-masthead.svg" />
+    </a>
+    <ul className="categories">
       {Object.keys(files).map((folder, index) => {
         const documents = files[folder];
         if (documents.length === 0) return null;
@@ -22,6 +24,17 @@ const Sidebar = ({ files }) => (
         );
       })}
     </ul>
+
+    <div className="latestWrapper">
+      <h2>Latest additions</h2>
+      <ul className="latest">
+        {latest.map((f, index) => (
+          <li key={index}>
+            <a href={`#${f.name}`}>{f.headline}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
   </aside>
 );
 
@@ -50,8 +63,8 @@ const Content = ({ files }) => (
       return (
         <section key={index} id={folder}>
           <h2>{capitalise(folder)}</h2>
-          {documents.map(({ content }, index) => (
-            <div className="markdown" key={index}>
+          {documents.map(({ name, content }, index) => (
+            <div className="markdown" key={index} id={name}>
               <ReactMarkdown source={content} />
             </div>
           ))}
@@ -61,9 +74,9 @@ const Content = ({ files }) => (
   </main>
 );
 
-const App = ({ files }) => (
+const App = ({ files, latest }) => (
   <div className="wrapper">
-    <Sidebar files={files} />
+    <Sidebar files={files} latest={latest} />
     <Content files={files} />
   </div>
 );
