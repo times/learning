@@ -1,0 +1,282 @@
+html {
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 4rem 0 0;
+}
+
+@media screen and (min-width: 737px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+div.wrapper {
+}
+
+@media screen and (min-width: 737px) {
+  div.wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.sidebar label {
+  height: 4rem;
+  width: 100%;
+  color: #fff;
+  background-color: #225ba0;
+  display: inline-block;
+  text-align: left;
+  padding: 0 1rem;
+  font-size: 2rem;
+  line-height: 4.4rem;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+}
+
+aside {
+  padding: 1rem;
+  background-color: #225ba0;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+}
+
+aside button {
+  top: 0;
+  left: 100%;
+  background-color: #225ba0;
+  color: #fff;
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  border: 0;
+}
+
+aside img {
+  max-width: 15rem;
+}
+
+aside ul.categories {
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+  flex-wrap: wrap;
+}
+
+aside ul.categories li {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+aside ul.categories li a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-align: center;
+  background: #fff;
+  padding: 1rem 2rem 0.8rem;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px #888;
+}
+
+aside ul.categories li a:hover,
+aside ul.categories li a:active,
+aside ul.categories li a:focus {
+  background: #3a3a3a;
+  color: #fff;
+}
+
+aside ul.categories li a:focus {
+  background: #3a3a3a;
+  color: #fff;
+}
+
+aside div.latestWrapper {
+  background: #fff;
+  padding: 2rem;
+  display: none;
+}
+
+aside div.latestWrapper h2 {
+  margin: 0 0 1rem;
+}
+
+aside ul.latest {
+  margin: 0;
+  padding: 0 0 0 2rem;
+  color: #225ba0;
+}
+
+aside ul.latest li {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+aside ul.latest li a {
+  color: #225ba0;
+}
+
+@media screen and (min-width: 737px) {
+  aside {
+    padding: 4rem 3rem;
+    min-width: 35rem;
+    max-width: 35rem;
+    overflow: auto;
+    height: 100vh;
+  }
+
+  aside ul.categories {
+    display: flex;
+  }
+
+  aside div.latestWrapper {
+    display: block;
+  }
+
+  aside img {
+    max-width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+main {
+  width: auto;
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 737px) {
+  main {
+    padding: 2rem 4rem;
+    max-width: initial;
+    margin: 0;
+  }
+}
+
+main header {
+  margin-bottom: 2rem;
+}
+
+main header a {
+  display: none;
+}
+
+main header iframe {
+  float: right;
+}
+
+main header h1 {
+  font-family: "TimesModern-Bold", serif;
+  font-weight: normal;
+  font-size: 3.4rem;
+  margin: 1rem 0;
+}
+
+main header p {
+  font-family: "TimesModern-Regular", serif;
+  font-size: 1.8rem;
+  line-height: 1.3em;
+  color: #696969;
+  margin: 0;
+}
+
+@media screen and (min-width: 737px) {
+  main header h1 {
+    font-size: 4.4rem;
+  }
+  main header p {
+    font-size: 2.2rem;
+  }
+}
+
+main section {
+  margin-bottom: 2rem;
+  max-width: 100rem;
+}
+
+@media screen and (min-width: 737px) {
+  main section {
+    margin-bottom: 5rem;
+  }
+}
+
+main section h2 {
+  color: #333;
+  margin: 0 0 0.6rem;
+  padding-top: 1rem;
+  border-bottom: 3px solid #333;
+  font-family: "TimesModern-Bold", serif;
+  font-weight: normal;
+}
+
+main section .markdown {
+  background: #f8f7f1;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 737px) {
+  main section .markdown {
+    padding: 1rem 3rem;
+  }
+}
+
+main section .markdown h1 a {
+  color: #225ba0;
+}
+
+main section .markdown h1 a:focus:after {
+  content: " →";
+}
+
+main section .markdown h1 {
+  font-size: 1.8rem;
+}
+
+main section .markdown h1:before {
+  content: "🔗 ";
+}
+
+main section .markdown blockquote {
+  border-left: 3px solid #333;
+  padding: 1rem;
+  margin: 0;
+}
+
+main section .markdown blockquote p {
+  margin: 0;
+}
+
+main section .markdown div > p:before {
+  content: "🔖 ";
+}
