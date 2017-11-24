@@ -1,12 +1,16 @@
 {
   "name": "learning",
   "version": "1.0.0",
-  "description": "Useful posts, articles, videos and podcasts related to development",
+  "description":
+    "Useful posts, articles, videos and podcasts related to development",
   "main": "index.js",
   "repository": "git@github.com:times/learning.git",
   "author": "Chris Hutchinson <chris.hutchinson@thetimes.co.uk>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "build": "./node_modules/babel-cli/bin/babel-node.js index.js"
+  },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",

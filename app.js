@@ -7,56 +7,38 @@ const capitalise = string => {
   return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
 };
 
-class Sidebar extends React.Component {
-  constructor(props) {
-    super(props);
+const Sidebar = ({ files }) => (
+  <aside className="sticky">
+    <img src="./dual-masthead.svg" />
+    <ul>
+      {Object.keys(files).map((folder, index) => {
+        const documents = files[folder];
+        if (documents.length === 0) return null;
 
-    this.state = {
-      open: false
-    };
-  }
-
-  handleToggle() {
-    const { open } = this.state;
-
-    this.setState({
-      open: !open
-    });
-  }
-
-  render() {
-    const { files } = this.props;
-    const { open } = this.state;
-
-    return (
-      <div className="sidebar">
-        <label htmlFor="handle">
-          <span>|||</span>
-        </label>
-        <input type="checkbox" id="handle" />
-        <aside className={`sticky ${open ? "open" : ""}`}>
-          <img src="./dual-masthead.svg" />
-          <ul>
-            {Object.keys(files).map((folder, index) => {
-              const documents = files[folder];
-              if (documents.length === 0) return null;
-
-              return (
-                <li key={index}>
-                  <a href={`#${folder}`}>{folder}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </aside>
-      </div>
-    );
-  }
-}
+        return (
+          <li key={index}>
+            <a href={`#${folder}`}>{folder}</a>
+          </li>
+        );
+      })}
+    </ul>
+  </aside>
+);
 
 const Content = ({ files }) => (
   <main>
     <header>
+      <a
+        className="github-button"
+        href="https://github.com/times/learning"
+        data-icon="octicon-star"
+        data-size="large"
+        data-show-count="true"
+        aria-label="Star times/learning on GitHub"
+      >
+        Star
+      </a>
+
       <h1>🎓 Learning</h1>
       <p>Useful posts, articles, videos and podcasts related to development</p>
     </header>

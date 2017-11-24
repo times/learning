@@ -45,6 +45,7 @@ fs.writeFileSync(
     </head>
       <body>${html}
 
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
       <script src="node_modules/stickyfilljs/dist/stickyfill.min.js"></script>
       <script type="text/javascript">
         Stickyfill.add(document.querySelectorAll('.sticky'));
