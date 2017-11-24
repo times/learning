@@ -61,7 +61,8 @@ fs.writeFileSync(
       <link rel="stylesheet" href="https://fonts.timesdev.tools/fonts/TimesModern-Bold.css" />
       <link rel="stylesheet" href="https://fonts.timesdev.tools/fonts/TimesModern-Regular.css" />
     </head>
-      <body>${html}
+    <body>
+      ${html}
 
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <script src="node_modules/stickyfilljs/dist/stickyfill.min.js"></script>
